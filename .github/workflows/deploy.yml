@@ -35,7 +35,7 @@ jobs:
           cache: "npm"
 
       - name: Install dependencies
-        run: make install
+        run: make init
 
       - name: Setup Pages
         id: setup_pages
