@@ -1,3 +1,13 @@
-export default function Page() {
-  return <h1>Hello, Next.js!</h1>;
-}
+"use client";
+
+import { Box } from "@mui/system";
+
+const Page: React.FC = () => {
+  return (
+    <Box>
+      <h1>horiyee.github.io</h1>
+    </Box>
+  );
+};
+
+export default Page;
