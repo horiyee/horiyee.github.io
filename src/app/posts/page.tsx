@@ -3,7 +3,7 @@ import { Box } from "@mui/system";
 const Page: React.FC = () => {
   return (
     <Box>
-      <h1>horiyblog</h1>
+      <h1>Blog Posts</h1>
     </Box>
   );
 };
