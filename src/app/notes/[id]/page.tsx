@@ -14,7 +14,7 @@ const Page: React.FC<Props> = async (props) => {
 export const generateStaticParams = async () => {
   return [
     {
-      id: "test",
+      id: "9784163917689",
     },
   ];
 };
