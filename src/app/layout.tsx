@@ -1,11 +1,15 @@
 import { PropsWithChildren } from "react";
+import { Header } from "../components/header";
 
 const RootLayout: React.FC<PropsWithChildren> = (props) => {
   const { children } = props;
 
   return (
     <html lang="ja">
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 };
