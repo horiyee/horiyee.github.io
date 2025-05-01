@@ -1,0 +1,120 @@
+# はじめに
+
+Webフロントエンドに手を出し始めたころからずっと、自分のポートフォリオサイトを作りたい！と思ってドメインまで取得していたのですが、なかなか時間がなく作れずにいました。しかし、現在長期インターンしているnoteのフロントエンドがNuxt.jsであったことがきっかけとなり、これまでReact系のフレームワークでしか開発してこなかったので勉強もかねて開発をはじめよう！と思い立ちました。
+
+# このサイトの技術面
+
+## 技術スタック
+
+まずはこのポートフォリオサイト（+ブログ）の技術面について紹介していきます。
+
+- 言語: TypeScript
+- フレームワーク: Nuxt.js
+- UIライブラリ: Vuetify.js
+- ホスティング: Vercel(SSG)
+- CMS: microCMS
+- シンタックスハイライト: highlight.js
+
+基本的に全ページSSG(Static Site Generation)で統一しており、Vercelでのビルド時にのみAPIへのデータフェッチが走り、静的なHTMLが生成されるようになっています。APIとはmicroCMSのことで、TOPページのお知らせやブログ記事の管理に使用しています。
+
+## リポジトリ環境
+
+### linter類
+
+- ESLint
+- Prettier
+- husky(lint-staged)
+- StyleLint
+- CommitLint
+
+詳しくは後述しますが、これらは`create-nuxt-app`で一括導入しました。
+
+### SCSS
+
+- `sass-loader` (^10.1.1)
+- `node-sass`
+- `@nuxtjs/style-resources`
+
+あたりをインストール後、`@/assets/styles`内にGlobalなSCSSを書きました。これにより、各コンポーネントから**import不要**で`mixins`, `variables`を使えます。Reactを書いていたころはそもそもCSSしか書いていなかったのですが、Global SCSSの便利さには驚愕しました。もう元には戻れません。
+
+さらに、各コンポーネントで
+
+<template>
+  <div class="o-hogeComponent">
+    <p class="o-hogeComponent__paragraph">hoge</p>
+  </div>
+</template>
+
+上のような`template`を書いたうえで
+
+<style lang="scss" scoped>
+$block: ".o-hogeComponent";
+#{$block} {
+  display: inline-block;
+  width: 100%;
+  &__paragraph {
+    font-size: 16px;
+  }
+}
+</style>
+
+このように`&__`で`class`を書き分けることでSCSSのスコープと実際にスタイルを当てるタグを対応させることができます。
+
+この書き方をすると、条件に応じてスタイルを変えたい（`active`なタブ、非同期処理実行中のボタン…など）場合に`string`なクラス名を変化させてあげるだけで容易にスタイルを動的に変化させることができる（しかもピュアなSCSS！）のがとてもうれしいです。
+
+ちなみに、クラス名についている`o-`はAtomic Designでの粒度を指しています。
+
+> p- => pages
+
+> t- => templates
+
+> o- => organisms
+
+> m- => molecules
+
+> a- => atoms
+
+### ディレクトリ構成
+
+基本的にNuxt本来のディレクトリ構成を崩さないようにしています。
+
+- assets　Global SCSSとアイコン画像（`@/assets/images`に配置した画像は`webpack`のモジュールとして扱われる）
+- components　各種コンポーネントをAtomic Design式のディレクトリ構造で格納
+- config　APIやドメインなど環境変数周りを格納
+- constants　様々な定数を格納（Vuetifyの`snackbar` typesとか）
+- contents　CMSで管理はしていないけど`v-for`で吐き出したいコンテンツを格納
+- pages　その名の通り各ページの`.vue`ファイルを格納
+- static　画像や`favicon`などの静的ファイルを格納
+- types　TypeScriptなので型定義をここに格納
+- utils　Date型データを`toLocaleDateString()`するものなどちょっとした関数を格納
+- view-models　APIからフェッチしてきたデータを必要なものだけに成形するための関数と型定義を格納
+
+本当は`api-clients`なんかも切り出したかったのですが、状態管理を入れておらず、`pages`上の`asyncData()`でしかAPIを叩かないので今回はしていません。
+
+# Nuxt.jsを使ってみて
+
+## `create-nuxt-app`がすごい！！
+
+プロジェクト作成時に叩くこちらのコマンドですが、他のどのフレームワークよりもすごいです。
+
+なぜなら、
+
+![](https://images.microcms-assets.io/assets/da85014d1c1e441f9602d537a0361842/02064343d6834901930feed8b6308999/create-nuxt-app.jpg)
+
+各種ライブラリ・linter類を一括導入できます。
+
+自力で全部導入してテンプレート的なリポジトリを作ってしまうのもかなり勉強になりますが、コマンド一発で導入できるとサクッと何かを作りたいときにめちゃくちゃ良いです。
+
+## SCSS環境がすごい！！
+
+これは一見NuxtというよりSCSSがすごいのでは？となりますが、ちゃんとNuxtがすごいです。
+
+現在WebフロントエンドといえばNext.js一強感がありますが、NextはCSS Modulesがビルトインされているため、`**pages**`**以外でのCSS/SCSSファイルのimportができません。**やろうと思えば`variables`, `mixins`をCSS Modulesで使うこともできますが、その都度importが必要になってしまいます。またCSS in JSの`styled-components`を入れるとなるとちょっと荒業を使ってやらないといけないみたいで、ビルトインのCSS Modules以外を導入しにくいという状況になっています。GlobalなSCSS・import不要な`variables`, `mixins`を快適に実現できるフレームワーク（かつモダンで実用可能なもの）は今のところNuxtのみじゃないかなと思っています。
+
+# まとめ
+
+今回はリポジトリ環境やSCSSの話などかなりDX(Developer Experience)を意識した内容になりました。最後にちょこっとだけNuxtで不満を抱えている点を挙げるとすると、全てがJavaScriptオブジェクトであるReactに対してVueはそうではない点や、Vueで定義したメソッドなどを再利用しにくい点がありますが、React・Vueそれぞれにメリットとデメリットがありますし、Vue 3 Composition APIが出たことによる改善も期待できるので、開発するものに応じて適切な選択ができればいいかなと思います。僕は結構Nuxt好きなので、当分は浸りたいと思います。お読みいただきありがとうございました！
+
+# 最後に
+
+このサイトの全ソースコードは[GitHubのリポジトリ](https://github.com/horri1520/portfolio-site-v2)で公開しているので、ぜひ覗いてみてください。プルリク大歓迎です！
