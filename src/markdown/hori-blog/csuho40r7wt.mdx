@@ -43,14 +43,17 @@ Webフロントエンドに手を出し始めたころからずっと、自分�
 
 さらに、各コンポーネントで
 
+```jsx
 <template>
   <div class="o-hogeComponent">
     <p class="o-hogeComponent__paragraph">hoge</p>
   </div>
 </template>
+```
 
 上のような`template`を書いたうえで
 
+```jsx
 <style lang="scss" scoped>
 $block: ".o-hogeComponent";
 #{$block} {
@@ -61,6 +64,7 @@ $block: ".o-hogeComponent";
   }
 }
 </style>
+```
 
 このように`&__`で`class`を書き分けることでSCSSのスコープと実際にスタイルを当てるタグを対応させることができます。
 
