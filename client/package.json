@@ -1,5 +1,6 @@
 {
     "name": "client",
+    "private": true,
     "scripts": {
         "dev": "vite dev"
     },
