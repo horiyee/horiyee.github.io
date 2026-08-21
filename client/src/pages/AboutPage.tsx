@@ -5,12 +5,7 @@ import { Layout } from '../components/Layout'
 export const AboutPage: FC = () => {
   return (
     <Layout title="About" description={`${site.name.en} のプロフィール。`}>
-      <header>
-        <hgroup>
-          <h1>About</h1>
-          <p>{profile.summary}</p>
-        </hgroup>
-      </header>
+      <h1>About</h1>
 
       <section>
         <h2>Profile</h2>

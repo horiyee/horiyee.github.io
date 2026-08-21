@@ -4,16 +4,13 @@ export const site = {
     ja: '堀内 凱登',
     en: 'Kaito Horiuchi',
   },
-  description:
-    'Software engineer. Building web products with care for craft, clarity, and speed.',
+  description: 'Portfolio of Kaito Horiuchi',
 } as const
 
 export const profile = {
-  handle: 'horiyee',
+  handle: 'ほり / hori / horiyee',
   hometown: '香川県',
-  residence: '福岡県',
-  summary:
-    'Web を中心にプロダクト開発をしてきたエンジニア。FA・機械学習からモバイルまで幅広く触りつつ、フロントエンドとプロダクト体験を得意としています。',
+  residence: '東京都',
 } as const
 
 export const sns = [
