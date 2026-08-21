@@ -153,13 +153,19 @@ export const career: CareerEntry[] = [
   {
     period: '2022.10 - 2023.3',
     org: '株式会社CARTA HOLDINGS',
-    team: 'サポーターズ Tech Studio本部',
+    team: 'サポーターズ Tech Studio',
     role: 'エンジニア（内定者アルバイト）',
   },
   {
-    period: '2023.4 - now',
+    period: '2023.4 - 2025.8',
     org: '株式会社CARTA HOLDINGS',
-    team: 'サポーターズ Tech Studio本部',
+    team: 'サポーターズ Tech Studio',
+    role: 'エンジニア',
+  },
+  {
+    period: '2025.9 - now',
+    org: '株式会社CARTA HOLDINGS',
+    team: 'CTO室 AI Lab',
     role: 'エンジニア',
   },
 ]
