@@ -27,7 +27,6 @@ export const Layout: FC<LayoutProps> = ({
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
         />
-        <link rel="stylesheet" href="/assets/global.css" />
       </head>
       <body>
         <header class="container">
@@ -35,15 +34,16 @@ export const Layout: FC<LayoutProps> = ({
             <ul>
               <li>
                 <strong>
-                  <a href="/" class="brand">
-                    {siteName}
-                  </a>
+                  <a href="/">{siteName}</a>
                 </strong>
               </li>
             </ul>
             <ul>
               <li>
                 <a href="/">Home</a>
+              </li>
+              <li>
+                <a href="/about/">About</a>
               </li>
             </ul>
           </nav>
