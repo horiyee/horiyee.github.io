@@ -20,22 +20,38 @@ export const Layout: FC<LayoutProps> = ({
       <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="color-scheme" content="light dark" />
         <title>{pageTitle}</title>
         <meta name="description" content={description} />
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+        />
         <link rel="stylesheet" href="/assets/global.css" />
       </head>
       <body>
-        <div class="site-shell">
-          <header class="site-header">
-            <a class="brand" href="/">
-              {siteName}
-            </a>
-          </header>
-          <main class="site-main">{children}</main>
-          <footer class="site-footer">
-            <span>© {new Date().getFullYear()} Kaito Horiuchi</span>
-          </footer>
-        </div>
+        <header class="container">
+          <nav>
+            <ul>
+              <li>
+                <strong>
+                  <a href="/" class="brand">
+                    {siteName}
+                  </a>
+                </strong>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <a href="/">Home</a>
+              </li>
+            </ul>
+          </nav>
+        </header>
+        <main class="container">{children}</main>
+        <footer class="container">
+          <small>© {new Date().getFullYear()} Kaito Horiuchi</small>
+        </footer>
       </body>
     </html>
   )

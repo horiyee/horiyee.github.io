@@ -2,6 +2,8 @@
 
 Hono + Vite SSG application for the portfolio site.
 
+Styled with [Pico CSS](https://picocss.com/) via CDN.
+
 | Script | Description |
 | --- | --- |
 | `pnpm dev` | Local development via `@hono/vite-dev-server` |
