@@ -20,9 +20,13 @@ export const Layout: FC<LayoutProps> = ({
       <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="color-scheme" content="light dark" />
         <title>{pageTitle}</title>
         <meta name="description" content={description} />
-        <link rel="stylesheet" href="/assets/pico.min.css" />
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+        />
         <link rel="stylesheet" href="/assets/global.css" />
       </head>
       <body>

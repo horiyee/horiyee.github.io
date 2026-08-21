@@ -2,7 +2,7 @@
 
 Hono + Vite SSG application for the portfolio site.
 
-Styled with [Pico CSS](https://picocss.com/).
+Styled with [Pico CSS](https://picocss.com/) via CDN.
 
 | Script | Description |
 | --- | --- |
@@ -17,5 +17,4 @@ src/
   components/     # Shared layout
   pages/          # Page views
 public/           # Static assets copied into dist
-scripts/          # Build helpers (e.g. copy Pico CSS)
 ```

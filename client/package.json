@@ -3,16 +3,12 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "assets:pico": "node scripts/copy-pico.mjs",
-    "predev": "pnpm assets:pico",
-    "prebuild": "pnpm assets:pico",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@picocss/pico": "^2.1.1",
     "hono": "^4.13.3"
   },
   "devDependencies": {
