@@ -3,7 +3,7 @@ import { Layout } from '../components/Layout'
 
 export const HomePage: FC = () => {
   return (
-    <Layout path="/">
+    <Layout>
       <section class="hero">
         <h1>horiyee</h1>
         <p>Hono SSG portfolio scaffold.</p>
