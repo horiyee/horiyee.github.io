@@ -32,18 +32,18 @@ export const sns = [
   },
   {
     name: 'X',
-    id: 'horiy0125',
-    url: 'https://x.com/horiy0125',
+    id: 'horiy_dev',
+    url: 'https://x.com/horiy_dev',
   },
   {
     name: 'Qiita',
-    id: 'horiy0125',
-    url: 'https://qiita.com/horiy0125',
+    id: 'horiyee',
+    url: 'https://qiita.com/horiyee',
   },
   {
     name: 'note',
-    id: 'horiy0125',
-    url: 'https://note.com/horiy0125',
+    id: 'horiyee',
+    url: 'https://note.com/horiyee',
   },
   {
     name: 'AtCoder',
