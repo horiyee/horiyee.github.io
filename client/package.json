@@ -1,0 +1,7 @@
+{
+    "name": "client",
+    "scripts": {
+        "dev": "vite dev"
+    },
+    "type": "module"
+}
