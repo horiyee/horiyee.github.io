@@ -1,17 +1,20 @@
 {
-    "name": "client",
-    "private": true,
-    "scripts": {
-        "dev": "vite dev"
-    },
-    "type": "module",
-    "dependencies": {
-        "hono": "^4.13.3"
-    },
-    "devDependencies": {
-        "@hono/vite-dev-server": "^0.26.1",
-        "@hono/vite-ssg": "^0.3.3",
-        "typescript": "^7.0.2",
-        "vite": "^8.2.2"
-    }
+  "name": "client",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "hono": "^4.13.3"
+  },
+  "devDependencies": {
+    "@hono/vite-dev-server": "^0.26.1",
+    "@hono/vite-ssg": "^0.3.3",
+    "typescript": "^7.0.2",
+    "vite": "^8.2.2"
+  }
 }

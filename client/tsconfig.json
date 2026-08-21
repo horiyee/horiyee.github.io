@@ -1,18 +1,18 @@
 {
-    "compilerOptions": {
-        "target": "ESNext",
-        "module": "ESNext",
-        "lib": ["ESNext", "DOM"],
-        "moduleResolution": "bundler",
-        "strict": true,
-        "skipLibCheck": true,
-        "noEmit": true,
-        "isolatedModules": true,
-        "esModuleInterop": true,
-        "resolveJsonModule": true,
-        "jsx": "react-jsx",
-        "jsxImportSource": "hono/jsx",
-        "types": ["vite/client"]
-    },
-    "include": ["src", "vite.config.ts"],
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "lib": ["ESNext", "DOM"],
+    "jsx": "react-jsx",
+    "jsxImportSource": "hono/jsx",
+    "strict": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "types": ["vite/client"]
+  },
+  "include": ["src", "vite.config.ts"]
 }
