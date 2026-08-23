@@ -1,10 +1,10 @@
 import { Hono } from 'hono'
-import { HomePage } from './pages/HomePage'
-import { AboutPage } from './pages/AboutPage'
+import { Index } from './pages/Index'
+import { About } from './pages/About'
 
 const app = new Hono()
 
-app.get('/', (c) => c.html(<HomePage />))
-app.get('/about/', (c) => c.html(<AboutPage />))
+app.get('/', (c) => c.html(<Index />))
+app.get('/about/', (c) => c.html(<About />))
 
 export default app
