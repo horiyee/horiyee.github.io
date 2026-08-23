@@ -39,10 +39,10 @@ export const Layout: FC<LayoutProps> = ({
             </ul>
             <ul>
               <li>
-                <a href="#profile">Profile</a>
+                <a href="/">Home</a>
               </li>
               <li>
-                <a href="#career">Career</a>
+                <a href="/about/">About</a>
               </li>
             </ul>
           </nav>
