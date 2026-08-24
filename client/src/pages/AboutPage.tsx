@@ -2,11 +2,10 @@ import type { FC } from 'hono/jsx'
 import { profile, site, sns } from '../content/site'
 import { Layout } from '../components/Layout'
 
-export const About: FC = () => {
+export const AboutPage: FC = () => {
   return (
     <Layout title="About" description={`${site.name.en} のプロフィール。`}>
       <h1>About</h1>
-      <p>Coming soon.</p>
 
       <section>
         <h2>Profile</h2>
