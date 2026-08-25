@@ -46,10 +46,14 @@ export const About: FC = () => {
 
         <article>
           <h3>2019</h3>
-          <p>九州大学 経済学部 経済工学科 入学</p>
+          <h4>九州大学 経済学部 経済工学科 入学</h4>
+        </article>
+
+        <article>
+          <h3>2019 - 2020</h3>
           <hgroup>
             <h4>株式会社クアンド</h4>
-            <p>エンジニア（長期インターン）</p>
+            <h5>エンジニア（長期インターン）</h5>
           </hgroup>
           <p>
             Vue.js, DjangoでのFA（Factory Automation）Webシステム開発、TensorFlow,
@@ -59,10 +63,10 @@ export const About: FC = () => {
         </article>
 
         <article>
-          <h3>2020</h3>
+          <h3>2020 - 2021</h3>
           <hgroup>
             <h4>株式会社Regnio</h4>
-            <p>エンジニア（長期インターン）</p>
+            <h5>エンジニア（長期インターン）</h5>
           </hgroup>
           <p>
             Gatsby.jsでの自社HP開発やWebViewを利用したモバイルアプリの開発、Raspberry
@@ -74,16 +78,21 @@ export const About: FC = () => {
           <h3>2021</h3>
           <hgroup>
             <h4>note株式会社</h4>
-            <p>web1チーム（旧カイゼンチーム） / エンジニア（長期インターン）</p>
+            <h5>web1チーム（旧カイゼンチーム）</h5>
+            <h6>エンジニア（長期インターン）</h6>
           </hgroup>
           <p>
             Nuxt.js, Ruby on Railsを用いて、noteのフロントエンド・サーバサイド開発に従事。
           </p>
           <p>ほかにも、Next.js, Svelteを用いてフロントエンドApp分割などにも携わった。</p>
+        </article>
 
+        <article>
+          <h3>2021</h3>
           <hgroup>
             <h4>株式会社サイバーエージェント</h4>
-            <p>Webフロントエンド / 2days ハッカソン型インターン 3位入賞</p>
+            <h5>Webフロントエンド</h5>
+            <h6>2days ハッカソン型インターン 3位入賞</h6>
           </hgroup>
           <p>用意されたAPIを使い、2日間でECサイトを開発するハッカソン形式のインターン。</p>
           <p>
@@ -97,10 +106,14 @@ export const About: FC = () => {
             </a>
             を参照。
           </p>
+        </article>
 
+        <article>
+          <h3>2021</h3>
           <hgroup>
             <h4>株式会社VOYAGE GROUP</h4>
-            <p>Treasure 2021 / グランプリ・UI/UX賞受賞</p>
+            <h5>Treasure 2021</h5>
+            <h6>グランプリ・UI/UX賞受賞</h6>
           </hgroup>
           <p>
             詳しくは
@@ -113,19 +126,27 @@ export const About: FC = () => {
             </a>
             を参照。
           </p>
+        </article>
 
+        <article>
+          <h3>2021</h3>
           <hgroup>
             <h4>クックパッド株式会社</h4>
-            <p>Cookpad Summer Internship 2021 / 裏Techコース（1day）</p>
+            <h5>Cookpad Summer Internship 2021</h5>
+            <h6>裏Techコース（1day）</h6>
           </hgroup>
           <p>
             Next.js, Ruby on
             Railsで構築されたアプリケーションを題材に、GraphQLを用いてAPIを開発するインターン。
           </p>
+        </article>
 
+        <article>
+          <h3>2021</h3>
           <hgroup>
             <h4>クックパッド株式会社</h4>
-            <p>買物サービス開発部 / エンジニア（就業型インターン）</p>
+            <h5>買物サービス開発部</h5>
+            <h6>エンジニア（就業型インターン）</h6>
           </hgroup>
           <p>
             かいもの連携機能の開発に前半はSwiftを用いて（クックパッドiOSアプリ）、後半はNext.jsを用いて（Web版クックパッド）携わった。
@@ -136,20 +157,31 @@ export const About: FC = () => {
           <h3>2022</h3>
           <hgroup>
             <h4>株式会社CARTA HOLDINGS</h4>
-            <p>fluct アドプラットフォーム事業本部 / エンジニア（内定者アルバイト）</p>
+            <h5>fluct アドプラットフォーム事業本部</h5>
+            <h6>エンジニア（内定者アルバイト）</h6>
           </hgroup>
+        </article>
+
+        <article>
+          <h3>2022 - 2023</h3>
           <hgroup>
             <h4>株式会社CARTA HOLDINGS</h4>
-            <p>サポーターズ Tech Studio / エンジニア（内定者アルバイト）</p>
+            <h5>サポーターズ Tech Studio</h5>
+            <h6>エンジニア（内定者アルバイト）</h6>
           </hgroup>
         </article>
 
         <article>
           <h3>2023</h3>
-          <p>九州大学 経済学部 経済工学科 卒業</p>
+          <h4>九州大学 経済学部 経済工学科 卒業</h4>
+        </article>
+
+        <article>
+          <h3>2023 - 2025</h3>
           <hgroup>
             <h4>株式会社CARTA HOLDINGS</h4>
-            <p>サポーターズ Tech Studio / エンジニア</p>
+            <h5>サポーターズ Tech Studio</h5>
+            <h6>エンジニア</h6>
           </hgroup>
         </article>
 
@@ -157,7 +189,8 @@ export const About: FC = () => {
           <h3>2025 - now</h3>
           <hgroup>
             <h4>株式会社CARTA HOLDINGS</h4>
-            <p>CTO室 AI Lab / エンジニア</p>
+            <h5>CTO室 AI Lab</h5>
+            <h6>エンジニア</h6>
           </hgroup>
         </article>
       </section>
