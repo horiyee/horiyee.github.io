@@ -143,7 +143,8 @@ export const Index: FC = () => {
         </article>
 
         <article>
-          <h3>2023 – 2025</h3>
+          <h3>2023</h3>
+          <p>九州大学 経済学部 経済工学科 卒業</p>
           <hgroup>
             <h4>株式会社CARTA HOLDINGS</h4>
             <p>サポーターズ Tech Studio / エンジニア</p>
@@ -151,7 +152,7 @@ export const Index: FC = () => {
         </article>
 
         <article>
-          <h3>2025 –</h3>
+          <h3>2025 - now</h3>
           <hgroup>
             <h4>株式会社CARTA HOLDINGS</h4>
             <p>CTO室 AI Lab / エンジニア</p>
