@@ -49,7 +49,6 @@ export const About: FC = () => {
                 >
                   GitHub
                 </a>
-                <span> — horiyee</span>
               </li>
               <li>
                 <a
@@ -59,7 +58,6 @@ export const About: FC = () => {
                 >
                   X
                 </a>
-                <span> — horiy_dev</span>
               </li>
               <li>
                 <a
@@ -69,7 +67,6 @@ export const About: FC = () => {
                 >
                   Qiita
                 </a>
-                <span> — horiyee</span>
               </li>
               <li>
                 <a
@@ -79,7 +76,6 @@ export const About: FC = () => {
                 >
                   note
                 </a>
-                <span> — horiyee</span>
               </li>
               <li>
                 <a
@@ -89,7 +85,6 @@ export const About: FC = () => {
                 >
                   AtCoder
                 </a>
-                <span> — horiy0125</span>
               </li>
             </ul>
           </nav>
