@@ -38,6 +38,56 @@ export const About: FC = () => {
               </tbody>
             </table>
           </figure>
+
+          <nav aria-label="SNS">
+            <ul>
+              <li>
+                <a
+                  href="https://github.com/horiyee"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://x.com/horiy_dev"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  X
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://qiita.com/horiyee"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Qiita
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://note.com/horiyee"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  note
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://atcoder.jp/users/horiy0125"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  AtCoder
+                </a>
+              </li>
+            </ul>
+          </nav>
         </article>
       </section>
 
