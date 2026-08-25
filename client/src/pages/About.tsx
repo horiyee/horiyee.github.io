@@ -5,7 +5,7 @@ import { Layout } from '../components/Layout'
 export const About: FC = () => {
   return (
     <Layout title="About" description={`${site.name.en} のプロフィールと経歴。`}>
-      <h1>About</h1>
+      <h1>About Me</h1>
 
       <section>
         <hgroup>
@@ -18,12 +18,15 @@ export const About: FC = () => {
             <h3>
               {site.name.ja}（{site.name.en}）
             </h3>
-            <p>{profile.handle}</p>
           </hgroup>
 
           <figure>
             <table>
               <tbody>
+                <tr>
+                  <th scope="row">ハンドルネーム</th>
+                  <td>{profile.handle}</td>
+                </tr>
                 <tr>
                   <th scope="row">出身地</th>
                   <td>{profile.hometown}</td>
