@@ -4,6 +4,7 @@ export const site = {
     ja: '堀内 凱登',
     en: 'Kaito Horiuchi',
   },
+  tagline: 'Software Engineer',
   description: 'Portfolio of Kaito Horiuchi',
 } as const
 
@@ -13,7 +14,46 @@ export const profile = {
   residence: '東京都',
 } as const
 
-export const sns = [
+export type SiteLink = {
+  name: string
+  description: string
+  href: string
+  external?: boolean
+}
+
+export const siteLinks: SiteLink[] = [
+  {
+    name: 'About',
+    description: 'プロフィールと経歴',
+    href: '/about/',
+  },
+  {
+    name: 'Development',
+    description: '開発・制作',
+    href: 'https://horiylab.github.io',
+    external: true,
+  },
+  {
+    name: 'Technology',
+    description: '技術スタック',
+    href: 'https://horiylab.github.io',
+    external: true,
+  },
+  {
+    name: 'Blog',
+    description: '技術ブログ',
+    href: 'https://blog.horiy.dev',
+    external: true,
+  },
+]
+
+export type SnsLink = {
+  name: string
+  id: string
+  url: string
+}
+
+export const sns: SnsLink[] = [
   {
     name: 'GitHub',
     id: 'horiyee',
@@ -39,4 +79,4 @@ export const sns = [
     id: 'horiy0125',
     url: 'https://atcoder.jp/users/horiy0125',
   },
-] as const
+]
