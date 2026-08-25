@@ -49,9 +49,7 @@ export const Layout: FC<LayoutProps> = ({
           </nav>
         </header>
         <main class="container">{children}</main>
-        <footer class="container">
-          <small>© {new Date().getFullYear()} Kaito Horiuchi</small>
-        </footer>
+        <footer class="container"></footer>
       </body>
     </html>
   )
