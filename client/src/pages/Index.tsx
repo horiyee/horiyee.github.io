@@ -2,7 +2,7 @@ import type { FC } from 'hono/jsx'
 import { profile, site } from '../content/site'
 import { Layout } from '../components/Layout'
 
-export const HomePage: FC = () => {
+export const Index: FC = () => {
   return (
     <Layout>
       <hgroup>
