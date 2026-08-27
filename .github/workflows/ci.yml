@@ -16,39 +16,34 @@ jobs:
       fail-fast: false
       matrix:
         package: [client, blog]
-    defaults:
-      run:
-        working-directory: ${{ matrix.package }}
     steps:
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
       - name: Setup pnpm
         uses: pnpm/action-setup@0977fd99725f1db4007ccb2928dbb4e90d06cc86 # v6.0.10
-        with:
-          version: 10
 
       - name: Setup Node
         uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version: 22
           cache: pnpm
-          cache-dependency-path: ${{ matrix.package }}/pnpm-lock.yaml
+          cache-dependency-path: pnpm-lock.yaml
 
       - name: Install
         run: pnpm install --frozen-lockfile
 
       - name: Typecheck
-        run: pnpm typecheck
+        run: pnpm --filter ${{ matrix.package }} typecheck
 
       - name: Check
-        run: pnpm check
+        run: pnpm --filter ${{ matrix.package }} check
 
       - name: Test
-        run: pnpm test
+        run: pnpm --filter ${{ matrix.package }} test
 
       - name: Build
-        run: pnpm build
+        run: pnpm --filter ${{ matrix.package }} build
 
       - name: Upload client dist
         if: matrix.package == 'client'
