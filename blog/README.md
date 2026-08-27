@@ -16,6 +16,5 @@ src/
   index.tsx       # Hono app / routes
   components/     # Layout
   pages/          # Page views
-  content/        # Site metadata
 public/           # Static assets copied into dist
 ```

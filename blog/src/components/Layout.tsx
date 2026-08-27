@@ -1,5 +1,4 @@
 import type { Child, FC } from 'hono/jsx'
-import { site } from '../content/site'
 
 type LayoutProps = {
   title?: string
@@ -7,12 +6,16 @@ type LayoutProps = {
   children: Child
 }
 
+const brand = 'blog.horiy.dev'
+const siteName = 'horiy blog'
+const defaultDescription = 'Notes and writings by Kaito Horiuchi'
+
 export const Layout: FC<LayoutProps> = ({
   title,
-  description = site.description,
+  description = defaultDescription,
   children,
 }) => {
-  const pageTitle = title ? `${title} · ${site.name}` : site.name
+  const pageTitle = title ? `${title} · ${siteName}` : siteName
 
   return (
     <html lang="ja">
@@ -33,7 +36,7 @@ export const Layout: FC<LayoutProps> = ({
             <ul>
               <li>
                 <strong>
-                  <a href="/">{site.brand}</a>
+                  <a href="/">{brand}</a>
                 </strong>
               </li>
             </ul>
