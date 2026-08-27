@@ -17,3 +17,4 @@ pnpm build
 ```
 
 CI runs these for `client/` and `blog/` on push and pull requests.
+On `main`, the same `client` build artifact is deployed to GitHub Pages.
