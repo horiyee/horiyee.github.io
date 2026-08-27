@@ -1,6 +1,6 @@
 import type { FC } from 'hono/jsx'
-import { profile, site } from '../content/site'
 import { Layout } from '../components/Layout'
+import { profile, site } from '../content/site'
 
 export const About: FC = () => {
   return (
