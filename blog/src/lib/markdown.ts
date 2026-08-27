@@ -20,7 +20,7 @@ function parseFrontmatterBlock(block: string): EntryFrontmatter {
   }
 
   if (!fields.title || !fields.date) {
-    throw new Error('frontmatter requires title and date')
+    throw new Error('frontmatter には title と date が必要です')
   }
 
   return {
@@ -32,7 +32,7 @@ function parseFrontmatterBlock(block: string): EntryFrontmatter {
 export function parseMarkdown(raw: string): ParsedMarkdown {
   const match = raw.match(frontmatterPattern)
   if (!match) {
-    throw new Error('markdown must start with YAML frontmatter')
+    throw new Error('Markdown は YAML frontmatter で始まる必要があります')
   }
 
   return {

@@ -23,4 +23,5 @@ blog/
     components/      # Layout
     pages/           # Index / Entry views
     lib/             # Markdown + content loader
+    __tests__/       # Vitest
 ```
