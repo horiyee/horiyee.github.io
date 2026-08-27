@@ -7,4 +7,14 @@ describe('app', () => {
     expect(res.status).toBe(200)
     expect(await res.text()).toContain('horiy blog')
   })
+
+  it('returns 404 for missing posts', async () => {
+    const res = await app.request('/posts/does-not-exist/')
+    expect(res.status).toBe(404)
+  })
+
+  it('returns 404 for missing notes', async () => {
+    const res = await app.request('/notes/does-not-exist/')
+    expect(res.status).toBe(404)
+  })
 })
