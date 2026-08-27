@@ -1,20 +1,28 @@
 # horiyee.github.io
 
-| Directory | Role |
+pnpm workspace for horiyee sites.
+
+| Package | Role |
 | --- | --- |
 | `client/` | Portfolio site (GitHub Pages) |
 | `blog/` | Blog foundation for `blog.horiy.dev` |
 
-## Checks
+## Scripts
 
-Each package supports:
+From the repo root:
 
-```bash
-pnpm typecheck
-pnpm check
-pnpm test
-pnpm build
-```
+| Script | Description |
+| --- | --- |
+| `pnpm dev:client` | Dev server for portfolio |
+| `pnpm dev:blog` | Dev server for blog |
+| `pnpm typecheck` | Typecheck all packages |
+| `pnpm check` | Biome check all packages |
+| `pnpm test` | Test all packages |
+| `pnpm build` | Build all packages |
+| `pnpm build:client` | Build portfolio only |
+| `pnpm build:blog` | Build blog only |
 
-CI runs these for `client/` and `blog/` on push and pull requests.
+Or target one package with `pnpm --filter client <script>`.
+
+CI runs typecheck / check / test / build for each package on push and pull requests.
 On `main`, the same `client` build artifact is deployed to GitHub Pages.

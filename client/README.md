@@ -2,6 +2,8 @@
 
 Hono + Vite SSG application for the portfolio site.
 
+Part of the root pnpm workspace. From the repo root: `pnpm --filter client <script>` or `pnpm dev:client`.
+
 Styled with [Pico CSS](https://picocss.com/) via CDN.
 
 | Script | Description |

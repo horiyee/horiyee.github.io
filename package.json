@@ -1,0 +1,19 @@
+{
+  "name": "horiyee",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev:client": "pnpm --filter client dev",
+    "dev:blog": "pnpm --filter blog dev",
+    "typecheck": "pnpm -r --filter './client' --filter './blog' typecheck",
+    "check": "pnpm -r --filter './client' --filter './blog' check",
+    "test": "pnpm -r --filter './client' --filter './blog' test",
+    "build": "pnpm -r --filter './client' --filter './blog' build",
+    "build:client": "pnpm --filter client build",
+    "build:blog": "pnpm --filter blog build"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "packageManager": "pnpm@10.33.3"
+}
