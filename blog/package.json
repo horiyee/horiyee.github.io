@@ -6,15 +6,19 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "lint": "biome lint .",
+    "test": "vitest run"
   },
   "dependencies": {
     "hono": "^4.13.3"
   },
   "devDependencies": {
+    "@biomejs/biome": "^2.5.10",
     "@hono/vite-dev-server": "^0.26.1",
     "@hono/vite-ssg": "^0.3.3",
     "typescript": "^7.0.2",
-    "vite": "^8.2.2"
+    "vite": "^8.2.2",
+    "vitest": "^3.2.4"
   }
 }
