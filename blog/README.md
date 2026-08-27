@@ -1,10 +1,10 @@
 # blog
 
-Hono + Vite SSG foundation for [blog.horiy.dev](https://blog.horiy.dev).
+Hono + Vite SSG blog for [blog.horiy.dev](https://blog.horiy.dev).
 
 Part of the root pnpm workspace. From the repo root: `pnpm --filter blog <script>` or `pnpm dev:blog`.
 
-Posts, content pipeline, and deploy come later.
+Markdown posts live under `posts/*.md`. Frontmatter needs `title` and `date`. Article bodies are maintained separately from this pipeline.
 
 | Script | Description |
 | --- | --- |
@@ -16,8 +16,12 @@ Posts, content pipeline, and deploy come later.
 | `pnpm test` | Vitest |
 
 ```text
-src/
-  index.tsx       # Hono app / routes
-  components/     # Layout
-  pages/          # Page views
+blog/
+  posts/             # Markdown posts
+  src/
+    index.tsx        # Hono app / routes
+    components/      # Layout
+    pages/           # Index / Entry views
+    lib/             # Markdown + content loader
+    __tests__/       # Vitest
 ```
