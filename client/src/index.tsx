@@ -1,6 +1,6 @@
 import { Hono } from 'hono'
-import { Index } from './pages/Index'
 import { About } from './pages/About'
+import { Index } from './pages/Index'
 
 const app = new Hono()
 

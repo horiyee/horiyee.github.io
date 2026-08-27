@@ -10,7 +10,7 @@ Posts, content pipeline, and deploy come later.
 | `pnpm build` | Generate static site into `dist/` |
 | `pnpm preview` | Preview the production build |
 | `pnpm typecheck` | TypeScript check (`tsc --noEmit`) |
-| `pnpm lint` | Biome lint |
+| `pnpm check` | Biome check |
 | `pnpm test` | Vitest |
 
 ```text

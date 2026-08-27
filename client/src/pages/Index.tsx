@@ -1,6 +1,6 @@
 import type { FC } from 'hono/jsx'
-import { site } from '../content/site'
 import { Layout } from '../components/Layout'
+import { site } from '../content/site'
 
 export const Index: FC = () => {
   return (

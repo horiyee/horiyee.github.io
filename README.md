@@ -11,7 +11,7 @@ Each package supports:
 
 ```bash
 pnpm typecheck
-pnpm lint
+pnpm check
 pnpm test
 pnpm build
 ```
