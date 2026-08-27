@@ -1,10 +1,10 @@
 import { raw } from 'hono/html'
 import type { FC } from 'hono/jsx'
 import { Layout } from '../components/Layout'
-import type { Entry } from '../lib/content'
+import type { Post } from '../lib/content'
 
 type EntryPageProps = {
-  entry: Entry
+  entry: Post
 }
 
 export const EntryPage: FC<EntryPageProps> = ({ entry }) => {
