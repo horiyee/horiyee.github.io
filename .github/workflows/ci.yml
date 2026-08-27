@@ -36,16 +36,16 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Typecheck
-        run: pnpm --filter "./${{ matrix.package }}" typecheck
+        run: pnpm --filter ${{ matrix.package }} typecheck
 
       - name: Check
-        run: pnpm --filter "./${{ matrix.package }}" check
+        run: pnpm --filter ${{ matrix.package }} check
 
       - name: Test
-        run: pnpm --filter "./${{ matrix.package }}" test
+        run: pnpm --filter ${{ matrix.package }} test
 
       - name: Build
-        run: pnpm --filter "./${{ matrix.package }}" build
+        run: pnpm --filter ${{ matrix.package }} build
 
       - name: Upload client dist
         if: matrix.package == 'client'

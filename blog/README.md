@@ -2,7 +2,7 @@
 
 Hono + Vite SSG foundation for [blog.horiy.dev](https://blog.horiy.dev).
 
-Part of the root pnpm workspace. From the repo root: `pnpm --filter horiyblog <script>` or `pnpm dev:blog`.
+Part of the root pnpm workspace. From the repo root: `pnpm --filter blog <script>` or `pnpm dev:blog`.
 
 Posts, content pipeline, and deploy come later.
 
