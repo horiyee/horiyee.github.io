@@ -11,8 +11,8 @@ importers:
   blog:
     dependencies:
       hono:
-        specifier: ^4.13.8
-        version: 4.13.8
+        specifier: ^4.13.10
+        version: 4.13.10
       marked:
         specifier: ^18.0.13
         version: 18.0.13
@@ -22,10 +22,10 @@ importers:
         version: 2.5.14
       '@hono/vite-dev-server':
         specifier: ^0.26.1
-        version: 0.26.1(hono@4.13.8)
+        version: 0.26.1(hono@4.13.10)
       '@hono/vite-ssg':
         specifier: ^0.3.3
-        version: 0.3.3(hono@4.13.8)
+        version: 0.3.3(hono@4.13.10)
       typescript:
         specifier: ^7.0.2
         version: 7.0.2
@@ -39,18 +39,18 @@ importers:
   client:
     dependencies:
       hono:
-        specifier: ^4.13.8
-        version: 4.13.8
+        specifier: ^4.13.10
+        version: 4.13.10
     devDependencies:
       '@biomejs/biome':
         specifier: ^2.5.14
         version: 2.5.14
       '@hono/vite-dev-server':
         specifier: ^0.26.1
-        version: 0.26.1(hono@4.13.8)
+        version: 0.26.1(hono@4.13.10)
       '@hono/vite-ssg':
         specifier: ^0.3.3
-        version: 0.3.3(hono@4.13.8)
+        version: 0.3.3(hono@4.13.10)
       typescript:
         specifier: ^7.0.2
         version: 7.0.2
@@ -777,8 +777,8 @@ packages:
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
 
-  hono@4.13.8:
-    resolution: {integrity: sha512-/Gng7NfoykZl2pjukW5Z6+8Yxm3BPRf86GTbQnt0SbySkvax4fyL4H3HhY1cCpBGmiW9XDRFzRV+CXK2W8QudQ==}
+  hono@4.13.10:
+    resolution: {integrity: sha512-dQuLsa5oO+47QVMVMaaD9cIv8ctmVtK1iRvwWngkfloFJMeFeuoUFDswIqZGxmGX3hrRzREgEArjkK9OgsQEhA==}
     engines: {node: '>=16.9.0'}
 
   js-tokens@9.0.1:
@@ -1188,19 +1188,19 @@ snapshots:
   '@esbuild/win32-x64@0.28.2':
     optional: true
 
-  '@hono/node-server@1.19.17(hono@4.13.8)':
+  '@hono/node-server@1.19.17(hono@4.13.10)':
     dependencies:
-      hono: 4.13.8
+      hono: 4.13.10
 
-  '@hono/vite-dev-server@0.26.1(hono@4.13.8)':
+  '@hono/vite-dev-server@0.26.1(hono@4.13.10)':
     dependencies:
-      '@hono/node-server': 1.19.17(hono@4.13.8)
-      hono: 4.13.8
+      '@hono/node-server': 1.19.17(hono@4.13.10)
+      hono: 4.13.10
       minimatch: 9.0.9
 
-  '@hono/vite-ssg@0.3.3(hono@4.13.8)':
+  '@hono/vite-ssg@0.3.3(hono@4.13.10)':
     dependencies:
-      hono: 4.13.8
+      hono: 4.13.10
 
   '@jridgewell/sourcemap-codec@1.5.5': {}
 
@@ -1514,7 +1514,7 @@ snapshots:
   fsevents@2.3.3:
     optional: true
 
-  hono@4.13.8: {}
+  hono@4.13.10: {}
 
   js-tokens@9.0.1: {}
 
