@@ -14,7 +14,7 @@
     "hono": "^4.13.16"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.6.4",
+    "@biomejs/biome": "^2.6.6",
     "@hono/vite-dev-server": "^0.26.1",
     "@hono/vite-ssg": "^0.3.3",
     "typescript": "^7.0.2",
