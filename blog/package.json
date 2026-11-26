@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "hono": "^4.13.21",
-    "marked": "^18.2.0"
+    "marked": "^18.2.1"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.6.8",
